@@ -1,0 +1,28 @@
+.custom-form-group{
+    display: inline-block;
+}
+
+.custom-form-group input[type="checkbox"], .custom-form-group input[type="radio"]{
+    display: none;
+}
+
+.custom-form-group input + label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #EBEBEB;
+}
+.custom-form-group input[type="radio"] + label{
+    border-radius: 50%;
+}
+
+.custom-form-group input:checked + label{
+    border-color:#DE5F55;
+}
+.custom-form-group input[type="checkbox"]:checked + label{
+    background: url("../assets/spritesheet.png") no-repeat -5px -5px;
+}
+
+.custom-form-group input[type="radio"]:checked + label{
+    background: url("../assets/spritesheet.png") no-repeat -45px -5px;
+}

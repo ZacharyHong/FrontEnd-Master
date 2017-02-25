@@ -1,0 +1,45 @@
+.custom-form-group{
+    display: inline-block;
+}
+
+.custom-form-group input[type="checkbox"], .custom-form-group input[type="radio"]{
+    display: none;
+}
+
+.custom-form-group input + label{
+    position: relative;
+    display: inline-block;
+    /* label的初始宽高必须设置为一致 */
+    width:15px;
+    height:15px;
+    border:1px solid #EBEBEB;
+    /* checkbox的伪元素内容字体大小的参照参数,必须设置与label的高度一致*/
+    font-size:15px;
+
+}
+.custom-form-group input[type="radio"] + label{
+    border-radius: 50%;
+}
+
+.custom-form-group input:checked + label{
+    border-color:#DE5F55;
+}
+.custom-form-group input:checked + label:after{
+    position: absolute;
+    display: block;
+    top:20%;
+    left:20%;
+    right:20%;
+    bottom:20%;
+}
+.custom-form-group input[type="checkbox"]:checked + label:after{
+    content:'√';
+    font-size: 0.8em;
+    line-height: 0.8em;
+    color: #DE5F55;
+}
+.custom-form-group input[type="radio"]:checked + label:after{
+    content:'';
+    border-radius: 50%;
+    background-color:#DE5F55;
+}
